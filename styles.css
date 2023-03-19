@@ -23,7 +23,7 @@ h1 {
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 82px;
+    font-size: 72px;
     letter-spacing: .1em;
     text-shadow: black 5px 5px 0;
     margin-bottom: 5px;
@@ -33,6 +33,8 @@ h1 {
     display: grid;
     align-items: center;
     justify-content: center;
+    width: 700px;
+    height: 700px;
     border: black solid 3px;
     grid-template-rows: repeat(var(--slot-rows), 25px);
     grid-template-columns: repeat(var(--slot-cols), 25px);
@@ -40,8 +42,34 @@ h1 {
 
 .square {
     background-color: white;
-    width: 25px;
-    height: 25px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    gap:25px;
+    margin: auto;
+    max-width:655px;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: white;
+    min-width: 200px;
+    border: none;
+    border-radius: 8px;
+    margin-top:15px;
+    box-shadow: rgba(0, 0, 0, 0.434) 4px 4px 3px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 @media (min-aspect-ratio: 16/9) {
