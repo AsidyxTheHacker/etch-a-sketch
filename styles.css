@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .7;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: Pixel;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 82px;
+    letter-spacing: .1em;
+    text-shadow: black 5px 5px 0;
+    margin-bottom: 5px;
+}
+
+#board {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border: black solid 3px;
+    grid-template-rows: repeat(var(--slot-rows), 25px);
+    grid-template-columns: repeat(var(--slot-cols), 25px);
+}
+
+.square {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url("media/pixel.ttf");
+}
