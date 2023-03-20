@@ -53,6 +53,8 @@ let color = "black";
 
 eraserBtn.addEventListener('click', () => {
     color = "white";
+    eraserBtn.classList.add('active');
+    resetBtn.classList.remove('active');
 })
 resetBtn.addEventListener('click', () => {
     clearGrid();
@@ -60,6 +62,8 @@ resetBtn.addEventListener('click', () => {
     draw();
 });
 colorTrigger.addEventListener('input', () => {
+    eraserBtn.classList.remove('active');
+    resetBtn.classList.remove('active');
     color = colorTrigger.value;
 });
 range.onchange = () => {
