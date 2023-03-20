@@ -8,7 +8,7 @@ video {
     position: absolute;
     bottom: 0;
     z-index: -1;
-    opacity: .6;
+    opacity: .8;
 }
 
 #container {
@@ -28,6 +28,7 @@ h1 {
     letter-spacing: .1em;
     text-shadow: black 5px 5px 0;
     margin: auto;
+    transform: translateY(60px);
 }
 
 #board {
@@ -50,9 +51,10 @@ h1 {
 }
 
 #range {
-    margin-top:20px;
+    margin-top:30px;
     transform: scale(1.6) translateY(50px);
     height: 30px;
+    cursor: pointer;
 }
 
 .buttons {
@@ -106,7 +108,74 @@ button {
     margin: 3px 0 5px 0;
     text-shadow: black 0 0 9px;
     font-size: 28px;
-    transform:translateY(75px);
+    transform:translateY(81px);
+}
+
+#nightMode {
+    transform: scale(1.8);
+    width: 25px;
+    background: transparent;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+    border: none;
+    border-radius: 10px;
+    box-shadow: black 2px 2px 4px;
+  }
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    filter: drop-shadow(1px 1px 0 black);
+ }
+
+ label {
+    width: 90px;
+    height: 40px;
+    background-color: rgb(214, 177, 46);
+    box-shadow: rgba(0, 0, 0, 0.41) 3px 3px 0, inset rgba(0, 0, 0, 0.381) 2px 2px 4px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .3s ;
+    transform:translateX(440px);
+}
+
+label:after {
+    content: "";
+    width:35px;
+    height:33px;
+    top:138px;
+    transform: translateX(4px) translateY(-135px);
+    position: absolute;
+    background-color: rgb(227, 210, 58);
+    border-radius: 20px;
+    box-shadow: black 1px 1px 3px;
+    transition: .3s ;
+}
+
+#nightMode {
+    display: none;
+}
+
+input:checked + label {
+    background-color: rgb(35, 55, 67);
+}
+
+input:checked + label:after {
+    background-color: rgb(65, 103, 160);
+    transform: translateX(51px) translateY(-135px);
+}
+
+.dark {
+    filter: hue-rotate(130deg) brightness(85%);
+    opacity: .6;
+}
+
+.dark2 {
+    background-color: rgb(135, 170, 209);
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -127,3 +196,5 @@ button {
     font-family: 'Pixel';
     src: url("media/pixel.ttf");
 }
+
+@keyframes shake

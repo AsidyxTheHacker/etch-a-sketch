@@ -1,10 +1,12 @@
 const board = document.getElementById("board");
 const range = document.getElementById("range");
+const night = document.getElementById("nightMode");
 const rangeText = document.getElementById("rangeText");
 const gridItem = document.getElementsByClassName('grid-item');
 const colorTrigger = document.getElementById("color");
 const resetBtn = document.getElementById("resetBtn");
 const eraserBtn = document.getElementById("eraserBtn");
+const saveBtn = document.getElementById("saveBtn");
 
 function createGrid(size) {
     board.style.setProperty('--grid-rows', size);
@@ -66,3 +68,11 @@ range.onchange = () => {
     createGrid(range.value);
     draw();
 };
+
+const body = document.querySelector('body');
+const video = document.querySelector('video');
+const toggle = document.querySelector('#nightMode');
+toggle.addEventListener('click', () => {
+    video.classList.toggle('dark');
+    body.classList.toggle('dark2');
+})
