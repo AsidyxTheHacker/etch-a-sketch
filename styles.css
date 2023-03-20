@@ -1,14 +1,14 @@
 body {
     margin: 0;
-    background-color: black;
+    background-color: rgb(119, 182, 119);
 }
 
 video {
+    height: 100%;
     position: absolute;
-    right: 0;
     bottom: 0;
     z-index: -1;
-    opacity: .7;
+    opacity: .6;
 }
 
 #container {
@@ -16,6 +16,7 @@ video {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    min-width: 64.5em;
 }
 
 h1 {
@@ -26,50 +27,86 @@ h1 {
     font-size: 72px;
     letter-spacing: .1em;
     text-shadow: black 5px 5px 0;
-    margin-bottom: 5px;
+    margin: auto;
 }
 
 #board {
     display: grid;
-    align-items: center;
-    justify-content: center;
+    background-color: white;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    -webkit-user-drag: none;
     width: 700px;
     height: 700px;
-    border: black solid 3px;
-    grid-template-rows: repeat(var(--slot-rows), 25px);
-    grid-template-columns: repeat(var(--slot-cols), 25px);
+    box-shadow: rgba(0, 0, 0, 0.47) 8px 8px 1px;
+    cursor: crosshair;
+    transform: scale(1.1) translateY(30px);
 }
 
-.square {
-    background-color: white;
+.grid-item {
+    border: solid rgba(0, 0, 0, 0.03) 1px;
+    text-align: center;
+    -webkit-user-drag: none;
+}
+
+#range {
+    margin-top:20px;
+    transform: scale(1.6) translateY(50px);
+    height: 30px;
 }
 
 .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: wrap;
     gap:25px;
     margin: auto;
-    max-width:655px;
+    transform: translateY(75px);
+    min-width: 64em;
 }
 
 button {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 36px;
     font-weight: bold;
+    color: rgba(29, 29, 29, 0.867);
     background-color: white;
     min-width: 200px;
     border: none;
     border-radius: 8px;
-    margin-top:15px;
-    box-shadow: rgba(0, 0, 0, 0.434) 4px 4px 3px;
+    margin-top:20px;
+    box-shadow: black 4px 4px 0;
+    border: solid black 3px;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    text-shadow: rgba(205, 205, 205, 0.809) 3px 3px 0;
 }
 
-button:hover {
-    transform: scale(1.1);
+.buttons button:hover {
+    transform: scale(1.08);
+    background-color: rgb(128, 187, 206);
+    color: black;
+    text-shadow: rgba(54, 96, 116, 0.572) 2px 2px 0;
+}
+
+#color {
+    min-width: 150px;
+    min-height: 40px;
+    box-shadow: black 4px 4px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transform: translateY(9px);
+}
+
+#rangeText {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 3px 0 5px 0;
+    text-shadow: black 0 0 9px;
+    font-size: 28px;
+    transform:translateY(75px);
 }
 
 @media (min-aspect-ratio: 16/9) {
