@@ -111,13 +111,6 @@ button {
     transform:translateY(81px);
 }
 
-#nightMode {
-    transform: scale(1.8);
-    width: 25px;
-    background: transparent;
-    cursor: pointer;
-}
-
 input[type="range"]::-webkit-slider-runnable-track {
     background: #053a5f;
     border: none;
@@ -139,7 +132,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 30px;
     margin-bottom: 20px;
     cursor: pointer;
-    transition: .3s ;
+    transition: .3s;
     transform:translateX(440px);
 }
 
@@ -153,7 +146,7 @@ label:after {
     background-color: rgb(227, 210, 58);
     border-radius: 20px;
     box-shadow: black 1px 1px 3px;
-    transition: .3s ;
+    transition: .3s;
 }
 
 #nightMode {
@@ -170,12 +163,31 @@ input:checked + label:after {
 }
 
 .dark {
-    filter: hue-rotate(130deg) brightness(85%);
+    filter: hue-rotate(130deg) brightness(70%);
     opacity: .6;
 }
 
 .dark2 {
-    background-color: rgb(117, 143, 172);
+    background-color: rgb(122, 172, 117);
+}
+
+#colorBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(6.5em);
+    gap: 15px;
+    min-width: 64.5em;
+}
+
+.paint-cell {
+    background-color: white;
+    width: 70px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.541) 5px 5px 0;
+    border-radius: 8px;
+    border: rgba(0, 0, 0, 0.541) solid 3px;
+    cursor: pointer;
 }
 
 @media (min-aspect-ratio: 16/9) {

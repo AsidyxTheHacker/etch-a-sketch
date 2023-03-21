@@ -80,3 +80,24 @@ toggle.addEventListener('click', () => {
     video.classList.toggle('dark');
     body.classList.toggle('dark2');
 })
+
+const colorPalette = document.getElementById('colorBtns');
+function colorCreator(swatch) {
+    for (c = 0; c < swatch; c++) {
+        let paint = document.createElement('div');
+        paint.id = 'paint-' + c;
+        colorPalette.appendChild(paint).className = 'paint-cell';
+    }
+}
+
+colorCreator(10);
+document.getElementById('paint-0').style.backgroundColor = 'rgb(255, 33, 33)';
+document.getElementById('paint-1').style.backgroundColor = 'rgb(30, 135, 255)';
+document.getElementById('paint-2').style.backgroundColor = 'rgb(43, 202, 29)';
+document.getElementById('paint-3').style.backgroundColor = 'rgb(242, 165, 40)';
+document.getElementById('paint-4').style.backgroundColor = 'rgb(242, 225, 40)';
+document.getElementById('paint-5').style.backgroundColor = 'rgb(171, 40, 242)';
+document.getElementById('paint-6').style.backgroundColor = 'rgb(243, 61, 213)';
+document.getElementById('paint-7').style.backgroundColor = 'rgb(113, 83, 41)';
+document.getElementById('paint-8').style.backgroundColor = 'rgb(127, 127, 127)';
+document.getElementById('paint-9').style.backgroundColor = 'rgb(29, 29, 29)';
