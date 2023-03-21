@@ -6,7 +6,6 @@ const gridItem = document.getElementsByClassName('grid-item');
 const colorTrigger = document.getElementById("color");
 const resetBtn = document.getElementById("resetBtn");
 const eraserBtn = document.getElementById("eraserBtn");
-const saveBtn = document.getElementById("saveBtn");
 
 function createGrid(size) {
     board.style.setProperty('--grid-rows', size);
@@ -112,43 +111,84 @@ dye8.style.backgroundColor = 'rgb(127, 127, 127)';
 let dye9 = document.getElementById('paint-9');
 dye9.style.backgroundColor = 'rgb(29, 29, 29)';
 
+const allDyes = [dye, dye1, dye2, dye3, dye4, dye5, dye6, dye7, dye8, dye9];
 dye.addEventListener('click', () => {
     color = 'rgb(255, 33, 33)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+      dye.classList.add('selected');
 })
 dye1.addEventListener('click', () => {
     color = 'rgb(30, 135, 255)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+      dye1.classList.add('selected');
 })
 dye2.addEventListener('click', () => {
     color = 'rgb(43, 202, 29)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+      dye2.classList.add('selected');
 })
 dye3.addEventListener('click', () => {
     color = 'rgb(242, 165, 40)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+      dye3.classList.add('selected');
 })
 dye4.addEventListener('click', () => {
     color = 'rgb(242, 225, 40)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+      dye4.classList.add('selected');
 })
 dye5.addEventListener('click', () => {
     color = 'rgb(171, 40, 242)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+      dye5.classList.add('selected');
 })
 dye6.addEventListener('click', () => {
     color = 'rgb(243, 61, 213)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+    dye6.classList.add('selected');
 })
 dye7.addEventListener('click', () => {
     color = 'rgb(113, 83, 41)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+    dye7.classList.add('selected');
 })
 dye8.addEventListener('click', () => {
     color = 'rgb(127, 127, 127)';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+    dye8.classList.add('selected');
 })
 dye9.addEventListener('click', () => {
     color = 'black';
     eraserBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
+    dye9.classList.add('selected');
 })

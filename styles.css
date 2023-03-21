@@ -188,10 +188,12 @@ input:checked + label:after {
     border-radius: 8px;
     border: rgba(0, 0, 0, 0.541) solid 3px;
     cursor: pointer;
+    transition: .2s;
 }
 
-.other {
-    opacity: .5;
+.selected {
+    border: solid whitesmoke 3px;
+    transform: scale(1.1);
 }
 
 @media (min-aspect-ratio: 16/9) {
