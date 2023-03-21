@@ -54,6 +54,9 @@ eraserBtn.addEventListener('click', () => {
     color = "white";
     eraserBtn.classList.add('active');
     resetBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
 })
 resetBtn.addEventListener('click', () => {
     clearGrid();
