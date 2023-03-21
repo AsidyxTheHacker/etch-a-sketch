@@ -89,15 +89,66 @@ function colorCreator(swatch) {
         colorPalette.appendChild(paint).className = 'paint-cell';
     }
 }
-
 colorCreator(10);
-document.getElementById('paint-0').style.backgroundColor = 'rgb(255, 33, 33)';
-document.getElementById('paint-1').style.backgroundColor = 'rgb(30, 135, 255)';
-document.getElementById('paint-2').style.backgroundColor = 'rgb(43, 202, 29)';
-document.getElementById('paint-3').style.backgroundColor = 'rgb(242, 165, 40)';
-document.getElementById('paint-4').style.backgroundColor = 'rgb(242, 225, 40)';
-document.getElementById('paint-5').style.backgroundColor = 'rgb(171, 40, 242)';
-document.getElementById('paint-6').style.backgroundColor = 'rgb(243, 61, 213)';
-document.getElementById('paint-7').style.backgroundColor = 'rgb(113, 83, 41)';
-document.getElementById('paint-8').style.backgroundColor = 'rgb(127, 127, 127)';
-document.getElementById('paint-9').style.backgroundColor = 'rgb(29, 29, 29)';
+
+let dye = document.getElementById('paint-0');
+dye.style.backgroundColor = 'rgb(255, 33, 33)';
+let dye1 = document.getElementById('paint-1');
+dye1.style.backgroundColor = 'rgb(30, 135, 255)';
+let dye2 = document.getElementById('paint-2');
+dye2.style.backgroundColor = 'rgb(43, 202, 29)';
+let dye3 = document.getElementById('paint-3');
+dye3.style.backgroundColor = 'rgb(242, 165, 40)';
+let dye4 = document.getElementById('paint-4');
+dye4.style.backgroundColor = 'rgb(242, 225, 40)';
+let dye5 = document.getElementById('paint-5');
+dye5.style.backgroundColor = 'rgb(171, 40, 242)';
+let dye6 = document.getElementById('paint-6');
+dye6.style.backgroundColor = 'rgb(243, 61, 213)';
+let dye7 = document.getElementById('paint-7');
+dye7.style.backgroundColor = 'rgb(113, 83, 41)';
+let dye8 = document.getElementById('paint-8');
+dye8.style.backgroundColor = 'rgb(127, 127, 127)';
+let dye9 = document.getElementById('paint-9');
+dye9.style.backgroundColor = 'rgb(29, 29, 29)';
+
+dye.addEventListener('click', () => {
+    color = 'rgb(255, 33, 33)';
+    eraserBtn.classList.remove('active');
+})
+dye1.addEventListener('click', () => {
+    color = 'rgb(30, 135, 255)';
+    eraserBtn.classList.remove('active');
+})
+dye2.addEventListener('click', () => {
+    color = 'rgb(43, 202, 29)';
+    eraserBtn.classList.remove('active');
+})
+dye3.addEventListener('click', () => {
+    color = 'rgb(242, 165, 40)';
+    eraserBtn.classList.remove('active');
+})
+dye4.addEventListener('click', () => {
+    color = 'rgb(242, 225, 40)';
+    eraserBtn.classList.remove('active');
+})
+dye5.addEventListener('click', () => {
+    color = 'rgb(171, 40, 242)';
+    eraserBtn.classList.remove('active');
+})
+dye6.addEventListener('click', () => {
+    color = 'rgb(243, 61, 213)';
+    eraserBtn.classList.remove('active');
+})
+dye7.addEventListener('click', () => {
+    color = 'rgb(113, 83, 41)';
+    eraserBtn.classList.remove('active');
+})
+dye8.addEventListener('click', () => {
+    color = 'rgb(127, 127, 127)';
+    eraserBtn.classList.remove('active');
+})
+dye9.addEventListener('click', () => {
+    color = 'black';
+    eraserBtn.classList.remove('active');
+})

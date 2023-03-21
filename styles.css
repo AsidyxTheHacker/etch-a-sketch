@@ -163,7 +163,7 @@ input:checked + label:after {
 }
 
 .dark {
-    filter: hue-rotate(130deg) brightness(70%);
+    filter: hue-rotate(130deg) brightness(80%);
     opacity: .6;
 }
 
@@ -188,6 +188,10 @@ input:checked + label:after {
     border-radius: 8px;
     border: rgba(0, 0, 0, 0.541) solid 3px;
     cursor: pointer;
+}
+
+.other {
+    opacity: .5;
 }
 
 @media (min-aspect-ratio: 16/9) {
