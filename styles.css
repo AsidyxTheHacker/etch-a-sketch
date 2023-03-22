@@ -168,7 +168,7 @@ input:checked + label:after {
 }
 
 .dark2 {
-    background-color: rgb(122, 172, 117);
+    background-color: rgb(117 134 171);
 }
 
 #colorBtns {
