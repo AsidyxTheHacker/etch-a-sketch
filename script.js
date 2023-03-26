@@ -66,6 +66,9 @@ resetBtn.addEventListener('click', () => {
 colorTrigger.addEventListener('input', () => {
     eraserBtn.classList.remove('active');
     resetBtn.classList.remove('active');
+    allDyes.forEach(function(el) {
+        el.classList.remove("selected")
+      })
     color = colorTrigger.value;
 });
 range.onchange = () => {
